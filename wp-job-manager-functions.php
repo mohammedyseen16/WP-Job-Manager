@@ -1464,7 +1464,7 @@ function job_manager_duplicate_listing( $post_id ) {
 	}
 
 	$post = get_post( $post_id );
-	if ( ! $post ) {
+	if ( ! $post || 'job_listing' !== $post->post_type ) {
 		return 0;
 	}
 
